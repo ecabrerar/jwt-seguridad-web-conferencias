@@ -45,7 +45,7 @@ Authorization: Basic Base64Encode(<clientId>:<clientSecret>)
 ```
 Tomar en cuenta los **(:)**, estos sirven para unir el **clientId** y el **clientSecret**.
 
-Tomando los valores que ya tenemos en el demo, vamos a la página ()[https://www.base64encode.org] y obtenemos el cifrado de <clientId>:<clientSecret>
+Tomando los valores que ya tenemos en el demo, vamos a la página [https://www.base64encode.org](https://www.base64encode.org) y obtenemos el cifrado de <clientId>:<clientSecret>
 Resultando lo siguiente:
     
 ```bash
@@ -80,9 +80,9 @@ Ejemplo:
 }
 ```
 
-El JWT corresponde al valor del atributo "access_token"
+El JWT corresponde al valor del atributo __"access_token"__
 
-Tomar el valor del __access_token__ e ir a la página ()[https://jwt.io]
+Tomar el valor del __access_token__ e ir a la página [https://jwt.io](https://jwt.io)
 Observar los valores de cada una de las partes que componente el JWT.
 
 Con el token que conseguimos podemos hacer peticiones al servicio web.
@@ -118,7 +118,7 @@ Los tokens tienen un tiempo de expiración, para hacer las pruebas con los ejemp
    docker pull quay.io/keycloak/keycloak
    ```
    
-   2. ()[https://www.keycloak.org/downloads.html]
+   2. [https://www.keycloak.org/downloads.html](https://www.keycloak.org/downloads.html)
    
    Arrancar keycloak en docker
   ```bash
@@ -126,7 +126,7 @@ Los tokens tienen un tiempo de expiración, para hacer las pruebas con los ejemp
   ```
 
    Entrar a la consola de keycloak
-   [](http://localhost:8080/auth/admin)
+   [http://localhost:8080/auth/admin](http://localhost:8080/auth/admin)
    
    Digitar la clave especificada anteriormente
 
@@ -215,6 +215,12 @@ TOKEN=`echo $RESULT | sed 's/.*access_token":"//g' | sed 's/".*//g'`
 curl http://localhost:8081/jconfdominicana/sessions -H "Authorization: bearer $TOKEN"
 ```
 
+### Referencias:
+
+* [https://www.baeldung.com/spring-boot-keycloak](https://www.baeldung.com/spring-boot-keycloak)
+* [https://www.keycloak.org/getting-started/getting-started-docker](https://www.keycloak.org/getting-started/getting-started-docker)
+* [https://quay.io/repository/keycloak/keycloak](https://quay.io/repository/keycloak/keycloak)
+* [Keycloak: Core concepts of open source identity and access management](https://developers.redhat.com/blog/2019/12/11/keycloak-core-concepts-of-open-source-identity-and-access-management/?sc_cid=701f2000000RtqCAAS)
 
 ### Autor: 
 Eudris Cabrera
