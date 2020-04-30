@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+
+
+apply plugin: 'eclipse'
+
+group = 'com.eudriscabrera.examples.java'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'com.okta.spring:okta-spring-boot-starter:1.4.0'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.5.RELEASE'
+	
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+	useJUnitPlatform()
+}
