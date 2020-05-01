@@ -63,16 +63,5 @@ public class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
 		 .hasRole("ROL_API_DEMO_WS")
 		 .anyRequest()
 		 .permitAll();
-//
-//		http
-//		 .csrf()
-//		 .disable()
-//		 .sessionManagement()
-//		 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//		 .and()
-//		 .authorizeRequests().antMatchers(HttpMethod.GET, "/servicios/persona*")
-//		 .hasRole("rol_api_servicio_sigef_persona")
-//		 .anyRequest()
-//		 .permitAll();
 	}
 }
