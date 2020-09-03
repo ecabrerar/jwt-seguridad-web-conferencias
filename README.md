@@ -133,14 +133,14 @@ Los tokens tienen un tiempo de expiración, para hacer las pruebas con los ejemp
   Ver guía [Keycloak con Docker](https://www.keycloak.org/getting-started/getting-started-docker) para más detalles.
 
 Por defecto keycloak tiene el realms **master**, para correr nuestro demo vamos a crear un realm y le pondremos **AuthDemo**, protocolo __openid-connect__, Access Type __public__.
-  Luego iremos a la opción de __roles__ y crear un nuevo rol llamado __ROL_API_DEMO_WS__.
+  Luego iremos a la opción de __roles__ y crear un nuevo rol llamado __ROLE_API_DEMO_WS__.
   
   Ahora procedemos a crear un usuario con los siguientes valores:
   **username : demo
   First Name : Demo
   Last Name : JUG**
   
-  Le damos a salvar y ahora vamos a pestaña __Rol Mapping__ y le agregamos el __ROL_API_DEMO_WS__ a este usuario.
+  Le damos a salvar y ahora vamos a pestaña __Rol Mapping__ y le agregamos el __ROLE_API_DEMO_WS__ a este usuario.
   En la pestaña **credentials** le asignaremos una contraseña **"demojug2020"** y quitar la opción de passowrd temporal. **Temporary password off**.
   
   Para verificar que todo está bien podemos entrar a [](http://localhost:8080/auth/realms/AuthDemo/account)
@@ -183,7 +183,7 @@ En el archivo __src/main/resources/application.properties__ tenemos la siguiente
 ```plantext
 server.port=8081
 
-keycloak.security-constraints[0].authRoles[0]=ROL_API_DEMO_WS
+keycloak.security-constraints[0].authRoles[0]=ROLE_API_DEMO_WS
 
 keycloak.security-constraints[1].securityCollections[0].patterns[0]=/jconfdominicana/*
 

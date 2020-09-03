@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.eudriscabrera.examples.java.keycloaktokenauth;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
@@ -59,9 +56,7 @@ public class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
 		super.configure(http);
 		http
 		 .authorizeRequests()
-		 .antMatchers("/jconfdominicana*")
-		 .hasRole("ROL_API_DEMO_WS")
 		 .anyRequest()
-		 .permitAll();
+		 .authenticated();
 	}
 }

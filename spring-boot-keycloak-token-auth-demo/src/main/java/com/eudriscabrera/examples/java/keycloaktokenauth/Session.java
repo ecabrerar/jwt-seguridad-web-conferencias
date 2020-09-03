@@ -55,4 +55,13 @@ public class Session {
 		this.time = time;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Session [id=").append(id).append(", title=").append(title).append(", speaker=").append(speaker)
+				.append(", time=").append(time).append("]");
+		return builder.toString();
+	}
+
+	
 }
