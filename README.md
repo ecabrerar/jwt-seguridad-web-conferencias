@@ -1,6 +1,8 @@
 # jwt-seguridad-web-conferencias
 Recursos para la presentación Seguridad para aplicaciones Web Java con JSON Web Tokens (JWT)
 
+Ver presentación en [SlideShare](https://www.slideshare.net/eudris/seguridad-para-aplicaciones-web-java-con-json-web-tokens-jwt-2020)
+
 # Demo Springboot con JWT usando Okta
 
 clonar el repositorio :
